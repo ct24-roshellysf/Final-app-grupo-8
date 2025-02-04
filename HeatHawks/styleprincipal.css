@@ -38,12 +38,13 @@
 }
 /* From Uiverse.io by adamgiebl */ 
 button {
-    background: white;
+    background: #250c30;
     font-family: "Roboto",serif;
     padding: 0.6em 1.3em;
     font-weight: 700;
     font-size: 18px;
     border: 3px solid black;
+    color: white;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     cursor: pointer;

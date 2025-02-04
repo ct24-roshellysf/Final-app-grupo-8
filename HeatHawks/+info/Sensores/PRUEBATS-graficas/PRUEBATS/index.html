@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Domótica</title>
+    <!--  Chart.js se cargue correctamente -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- ESTILO -->
+    <style>
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        #error-message {
+            color: red;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ffe6e6;
+            border-radius: 4px;
+            display: none; /* Se mostrará cuando haya un error */
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #e6f3ff;
+            border-radius: 4px;
+        }
+    </style>
+     <!-- ESTILO -->
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h1>Proyecto de Domótica</h1>
+        
+        <!-- Mensajes de estado y error -->
+        <div id="error-message"></div>
+        <div class="status">
+            Estado: <span id="connection-status">Conectando...</span><br>
+            Última actualización: <span id="lastUpdate">Ninguna</span>
+        </div>
+
+        <div class="chart-container">
+            <h2>Temperatura</h2>
+            <canvas id="temperaturaChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Humedad del Entorno</h2>
+            <canvas id="humedadChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Movimiento Detectado</h2>
+            <canvas id="movimientoChart"></canvas>
+        </div>
+    </div>
+
+    <!-- RUTA DE LOS ARCHIVOS JS VERIFICAR QUE ESTEN CORRECTAMENTE -->
+    <script src="thingspeak-api.js"></script>
+    <script src="chart-manager.js"></script>
+    <script>
+        const updateInterval = 15000; // 15 segundos esto lo pueden editar segun el teimpo que ustedes quieren que se actualice 
+
+        // Función para mostrar errores
+        function showError(message) {
+            const errorDiv = document.getElementById('error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        // Función para actualizar el estado en los gráficos 
+        function updateStatus(status) {
+            document.getElementById('connection-status').textContent = status;
+        }
+
+        async function updateData() {
+            try {
+                updateStatus('Obteniendo datos...');
+                const data = await fetchThingSpeakData();
+                updateCharts(data);
+                const now = new Date().toLocaleString();
+                document.getElementById('lastUpdate').textContent = now;
+                updateStatus('Conectado');
+                
+                // Ocultar mensaje de error si existe
+                document.getElementById('error-message').style.display = 'none';
+            } catch (error) {
+                console.error('Error en updateData:', error);
+                updateStatus('Error de conexión');
+                showError(`Error al actualizar los datos: ${error.message}`);
+            }
+        }
+
+        // Verificar que todos los scripts se han cargado
+        window.addEventListener('load', function() {
+            console.log('Página cargada completamente');
+            updateData();
+            setInterval(updateData, updateInterval);
+        });
+    </script>
+</body>
+</html>
