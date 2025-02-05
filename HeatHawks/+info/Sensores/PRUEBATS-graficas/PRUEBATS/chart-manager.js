@@ -59,7 +59,25 @@ function createCharts(data) {
             options: commonOptions
         });
 
-        
+        // Crear gráfico de movimiento 
+        const ctxMov = document.getElementById('movimientoChart');
+        if (!ctxMov) {
+            throw new Error('No se encontró el elemento movimientoChart');
+        }
+        movimientoChart = new Chart(ctxMov, {
+            type: 'line',
+            data: {
+                labels: data.map(feed => new Date(feed.created_at).toLocaleTimeString()),
+                datasets: [{
+                    label: 'Movimiento',
+                    data: data.map(feed => feed.field3),
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    fill: true
+                }]
+            },
+            options: commonOptions
+        });
 
         console.log('Gráficos creados exitosamente');
         //MANDARA ERROR SI LOS GRÁFICOS NO SE CREAN CORRECTAMENTE 
@@ -87,6 +105,10 @@ function updateCharts(data) {
             humedadChart.data.labels = timeLabels;
             humedadChart.data.datasets[0].data = data.map(feed => feed.field2);
             humedadChart.update();
+
+            movimientoChart.data.labels = timeLabels;
+            movimientoChart.data.datasets[0].data = data.map(feed => feed.field3);
+            movimientoChart.update();
 
             console.log('Gráficos actualizados exitosamente');
         }
