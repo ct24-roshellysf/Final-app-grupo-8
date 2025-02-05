@@ -4,7 +4,7 @@
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 1150px;
     z-index: -1;
 }
 *{
@@ -27,7 +27,7 @@
     text-align: justify;
     height: 60%;
     width: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 7%;
     font-size: 14.1px;
 }
@@ -38,7 +38,7 @@
     text-align: justify;
     height: 60%;
     width: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 37%;
 }
 .card3{
@@ -48,8 +48,18 @@
     text-align: justify;
     height: 60%;
     width: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 67%;
+}
+.card4{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    height: 60%;
+    width: 40%;
+    margin-top: 30%;
+    margin-left: 37%;
 }
 .card-body{
     background-color: black;
