@@ -41,8 +41,9 @@
               <p class="card-text">¿Te imaginas un sistema de monitoreo ambiental capaz de alertar sobre
                 cualquier cambio radical de las áreas boscosas?
               </p>
-              <a href=#ODSS><!--botón-->
-                <button>ver más</button>
+              <a href=#accordion>
+                <button class="carousel-btn">Saber más</button>
+              </a>
             </div>
           </div>
         </div>
@@ -54,13 +55,13 @@
               <div class="ods13"> <img src="ods13sinfondo.png" alt="">
               </div>
               <div class="texto d-flex align-items-center justify-content-center fw-bold">
-                <h2 #odss >Objetivos de Desarrollo Sostenible</h2>
+                <h2>Objetivos de Desarrollo Sostenible</h2>
               </div>
               <div class="ods15"> <img src="ods15sinfondo.png " alt="">
               </div>
             </div>
           </div><!--odss-->
-      <div id="ODSS" class="card card-custom-bg"><!--cards-->
+      <div class="card mt-5 card-custom-bg"><!--cards-->
         <div class="card text-center card-custom-bg">
           <div class="card-header fw-bold">
             <h5>¿Cómo está relacionado nuestro proyecto con estas ods?</h5>
@@ -72,14 +73,78 @@
             </p>
           </div>
         </div>
+
+        <div class="accordion mt-5" id="accordion" >
+          <div class="accordion-item">
+            <h2 class="accordion-header mb-0">
+              <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                ¿Cómo funcionará este sistema?
+              </button>
+            </h2 >
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <h6>Estaremos trabajando con los sensores DHT11, microcontroladores como
+                  la ESP32-CAM y con el dispositivo de LoRaWAN (Long Range Wide Area Network) la cual está diseñada para la comunicación 
+                  inalámbrica de baja potencia y de largo alcance, es ideal para aplicaciones que requieren transmitir pequeñas cantidades
+                  de datos a grandes distancias con un consumo energético mínimo. Funcionará de la siguiente manera: los sensores al medir la temperatura y humedad relativa de
+                  la ubicación en que estos se encuentren sus datos se enviarán a través del dispositivo de LoRaWAN conectado a la app web. </h6>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header mb-0">
+              <button class="accordion-button btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                ¿Por qué es importante?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body ">
+                <h6>A diferencia de métodos tradicionales como guardabosques o torres de control, este sistema permite un monitoreo constante, mayor alcance y automatización de alertas. Al detectar condiciones 
+                  críticas antes de que inicien los incendios, ayuda a prevenir desastres, proteger hábitats naturales y reducir la emisión de gases de efecto invernadero (GEI), los cuales contribuyen al cambio 
+                  climático al atrapar el calor en la atmósfera. Su implementación es clave para comunidades agrícolas, reservas naturales y áreas forestales en zonas de alto riesgo, además de ser una solución 
+                  atractiva para gobiernos y ONGs ambientales.</h6>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header mb-0">
+              <button class="accordion-button btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                ¿Cómo surgió esta idea?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <h6>"De pequeña fui muchas veces a la reserva forestal El Montuoso ubicada en la provincia de Herrera, cada que visitaba la reserva solo podía pensar en que tan grande y llena de biodiversidad está
+                  El Montuoso, luego de unos meses en 2021 vi en las noticias el reportaje de que esta reserva en la que cree varios recuerdos lindos había sufrido un incendio de masa vegetal el cual se extendió por
+                  por 4 hectareas de la reserva, zona en la cual se perdió el suelo por erosión, desde entonces desarrollé esta idea junto a mis compañeros Un Sistema De Vigilancia Contra Incendios"~Aura Domínguez~ 
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div> <!--cards-->    
   </main>
+  
     <footer class="bg-dark py-2">
       <div class="container text-light text-center">
         <p class="display-5 mb-3" style="font-family: Lora,serif;">HEATHAWKS</p>
         <small class="text-white-50">&copy; Copyright by A²R. All rights reserved.</small>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 500);
+            });
+        });
+    </script>
     
 </body>
 </html>
