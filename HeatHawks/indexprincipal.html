@@ -21,7 +21,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="../+info/+info.html">+Info</a>
               <a class="nav-link active" aria-current="page" href="../Sensores/sensores.html">Sensores</a>
               <a class="nav-link active" aria-current="page" href="../PRUEBATS-graficas/PRUEBATS/index.html">Gráficas</a>
             </div>
@@ -38,7 +37,7 @@
           <h1 class="h1" style="margin-top: 33%;">HeatHawks</h1>
           <div class="card" style="width: 30rem; margin-top: 1%; text-align: justify; background-color: transparent;">
             <div class="card-body">
-              <p class="card-text">¿Te imaginas un sistema de monitoreo ambiental capaz de alertar sobre
+              <p class="card-text1">¿Te imaginas un sistema de monitoreo ambiental capaz de alertar sobre
                 cualquier cambio radical de las áreas boscosas?
               </p>
               <a href=#accordion>
@@ -74,7 +73,7 @@
           </div>
         </div>
 
-        <div class="accordion mt-5" id="accordion" >
+        <div class="accordion" id="accordion" >
           <div class="accordion-item">
             <h2 class="accordion-header mb-0">
               <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -122,29 +121,46 @@
             </div>
           </div>
         </div>
+      </div> <!--cards--> 
+      
+      <!--procesos-->
+      <div id="marketing" class="card2" style="width: 18rem;">
+        <img src="Iconamanda.jpg" class="card-img-top" style="height: 250px;"><!--altura de la card Amanda-->
+        <div class="card-body">
+          <h5 class="card-title" style="font-family: Lora,serif;" >¿Cómo fue el proceso de marketing?~Amanda</h5>
+          <p class="card-text" style="font-family: Roboto,serif;" >El marketing inicial de nuestro proyecto fue sencillo 
+            y enriquecedor, ya que me permitió entender mejor el mercado al que nos dirigimos. Esta etapa fue clave para 
+            identificar las necesidades y tendencias del sector, lo que nos ayudó a conocer a nuestro público objetivo y 
+            diseñar propuestas de valor alineadas con sus expectativas.</p>
+        </div>
+      </div>
 
-      </div> <!--cards-->    
+      <div id="programación" class="card3" style="width: 18rem;">
+        <img src="iconroshy.jpg" class="card-img-top" style="height: 250px;"><!--altura de la card Roshy-->
+        <div class="card-body">
+          <h5 class="card-title" style="font-family: Lora,serif;" >¿Cómo fue el proceso de programación?~Roshellys</h5>
+          <p class="card-text" style="font-family: Roboto,serif;" >El desarrollo de la App Web fue un proceso largo y 
+            desafiante debido a la falta de experiencia y dominio del lenguaje. Sin embargo, con la ayuda de IAs y la 
+            tutora Rosa Guadamuz, se lograron superar los obstáculos. A pesar de las dificultades, fue una experiencia 
+            enriquecedora y satisfactoria.
+          </p></p>
+        </div>
+      </div>
+
+      <div id="electrónica" class="card4" style="width: 18rem;">
+        <img src="iconaura.jpg" class="card-img-top" style="height: 250px;"><!--altura de la card Aura-->
+        <div class="card-body">
+          <h5 class="card-title" style="font-family: Lora,serif;" >¿Cómo fue el proceso electrónico?~Aura</h5>
+          <p class="card-text" style="font-family: Roboto,serif;" >Mi experiencia con la electrónica ha sido un camino de 
+            aprendizajes, retos y satisfacciones. Aunque he enfrentado momentos de frustración, cada obstáculo me ha 
+            permitido mejorar, aprender algo valioso y entender mejor mis intereses. Gracias a esto, ahora tengo mayor 
+            claridad sobre mis objetivos y el rumbo que quiero seguir.</p>
+        </div>
+      </div><!--cards de procesos-->
+
   </main>
   
-    <footer class="bg-dark py-2">
-      <div class="container text-light text-center">
-        <p class="display-5 mb-3" style="font-family: Lora,serif;">HEATHAWKS</p>
-        <small class="text-white-50">&copy; Copyright by A²R. All rights reserved.</small>
-      </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top
-                }, 500);
-            });
-        });
-    </script>
+    
     
 </body>
 </html>

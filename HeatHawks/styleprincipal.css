@@ -30,7 +30,7 @@
     color: white;
     margin-left: 200px;
 }
-.card-text{
+.card-text1{
     font-family: "Roboto",serif;
     color: white;
     font-size: 25px;
@@ -68,7 +68,7 @@ h2{
 }
 .mitad{
      background-color: #250c30;
-     height: 400px;
+     height: 2000px;
      margin-top: 68px;
      
 }
@@ -159,7 +159,80 @@ background-color: #250c30 !important;
 background-color: #250c30 !important;
 }
 
-footer {
-    margin-top: 20px;
-    padding: 20px 0;
+/*procesos*/
+.c-item {
+    height: 480px;
 }
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1-info{
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    margin-left: 20%;
+}
+.card-header-info{
+    color: white;
+    font-family: "Lora",serif;
+}
+.card-text-info{
+    color: white;
+    font-family: "Roboto",serif;
+}
+.table-info{
+    position: absolute;
+    z-index: 2;
+}
+.titletable-info {
+    color: white;
+    text-align: center;
+    font-family: "Lora", serif;
+}
+.bodytable-info{
+    color: white;
+    text-align: justify;
+    font-family: "Roboto", serif;
+}
+.card2{
+    display: flex;
+    z-index: 2;
+    position: relative;
+    margin-left: 75px;
+    margin-top: 110px;
+    color: white;
+}
+.card3{
+    display: flex;
+    z-index: 2;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    margin-left: 720px;
+    margin-top: 10px;
+    color: white;
+}
+.card4{
+    display: flex;
+    z-index: 2;
+    position: relative;
+    margin-left: 75px;
+    margin-top: 85px;
+    color: white;
+}
+.card-title{
+    margin-top: -16px;
+    height: 50px;
+}
+.card-text{
+    margin-top: -8px;
+    font-size: 18px;
+    width: 430px;
+    height: 200px;
+    text-align: justify;
+}
+/*procesos*/
+
+
