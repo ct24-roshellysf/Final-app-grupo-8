@@ -29,6 +29,12 @@
     font-family: "Lora",serif;
     color: white;
     margin-left: 200px;
+    text-shadow: 2px 2px 5px #000;
+    transition: text-shadow 0.3s ease;
+    
+}
+.h1:hover{
+    text-shadow: 0 0 10px #e2e843, 0 0 20px #e2e843, 0 0 30px #e2e843;
 }
 .card-text1{
     font-family: "Roboto",serif;

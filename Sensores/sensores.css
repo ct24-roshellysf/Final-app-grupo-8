@@ -1,23 +1,22 @@
-/* From Uiverse.io by uiverse-astronaut */ 
+
 .container-fluid1 {
     width: 1499px;
-    height: 1100px;
+    height: 1200px;
     position: absolute;
     z-index: -2;
-    --color: #250c30;
-    background: linear-gradient(95deg, var(--color) 25%, transparent 25%) -50px 0,
-          linear-gradient(-15deg, var(--color) 25%, transparent 25%) -50px 0,
-          linear-gradient(25deg, transparent 75%, var(--color) 75%) -50px 0,
-          linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0,
-          linear-gradient(-15deg, transparent 75%, var(--color) 75%) -50px 0;
-    background-color: #250c30;
-    background-size: 40px 40px;
+    background-color: #1f0a28;
 }
 
 h3 {
-    color: #F5E6CC; /* Un tono crema suave que combina bien */
+    font-family: "Lora",serif;
+    color: white; /* Un tono crema suave que combina bien */
     text-shadow: 2px 2px 5px #000000; /* Sombras para mayor impacto */
+    transition: text-shadow 0.3s ease;
 }
+h3:hover {
+    text-shadow: 0 0 10px #e2e843, 0 0 20px #e2e843, 0 0 30px #e2e843;
+  }
+
 .card-title{
     justify-content: center;
     text-align: center;
@@ -35,7 +34,9 @@ h3 {
     width: 40%;
     margin-top: 5%;
     margin-left: 8%;
-    font-size: 14.1px;
+    font-size: 18px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
 }
 .card2{
     position: absolute;
@@ -46,6 +47,9 @@ h3 {
     width: 40%;
     margin-top: 5%;
     margin-left: 40%;
+    font-size: 18px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
 }
 .card3{
     position: absolute;
@@ -56,6 +60,9 @@ h3 {
     width: 40%;
     margin-top: 5%;
     margin-left: 72%;
+    font-size: 18px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
 }
 .card4{
     position: absolute;
@@ -64,12 +71,39 @@ h3 {
     text-align: justify;
     height: 60%;
     width: 40%;
-    margin-top: 35%;
-    margin-left: 40%;
+    margin-top: 40%;
+    margin-left: 24%;
+    font-size: 18px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
 }
+
 .card-body{
     background-color: black;
 }
+
+.imgbutton1{
+    margin-top: 45%;
+    margin-left: 53%;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.imgbutton2{
+    margin-top: -22%;
+    margin-left: 70%;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.imgbutton1:hover,
+.imgbutton2:hover{
+    filter: brightness(1.2);
+    filter: drop-shadow(0 0 10px #e2e843) drop-shadow(0 0 20px #e2e843);
+    transform: scale(1.10);
+    transition: all 0.3s ease;
+}
+
+
+
 /* From Uiverse.io by adamgiebl */ 
 button {
     color: white;
