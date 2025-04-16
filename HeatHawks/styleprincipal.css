@@ -25,27 +25,41 @@
     height: 668px;
     z-index: 1;
 }
-.h1{
-    font-family: "Lora",serif;
-    color: white;
-    margin-left: 200px;
-    text-shadow: 2px 2px 5px #000;
+.p1{
+    font-family: "Roboto Slab",serif;
+    color: black;
+    font-size: 70px;
+    margin-left: 45px;
+    margin-bottom: 0px;
+    text-shadow:
+    -3px -3px 0 #f2c419,
+     3px -3px 0 #f2c419,
+    -3px  3px 0 #f2c419,
+     3px  3px 0 #f2c419,
+    -3px  0px 0 #f2c419,
+     3px  0px 0 #f2c419,
+     0px -3px 0 #f2c419,
+     0px  3px 0 #f2c419;
     transition: text-shadow 0.3s ease;
     
 }
-.h1:hover{
-    text-shadow: 0 0 10px #e2e843, 0 0 20px #e2e843, 0 0 30px #e2e843;
+.p1:hover{
+    text-shadow: 0 0 10px #f2c419, 0 0 20px #f2c419, 0 0 30px #f2c419;
 }
 .card-text1{
-    font-family: "Roboto",serif;
-    color: white;
-    font-size: 25px;
-    width: 550px;
+    font-family: "Lato",serif;
+    color: #f2c419;
+    
+    font-size: 22px;
+    width: 600px;
+    margin-left: 27px;
+    margin-top: 0px;
 }
 /* From Uiverse.io by adamgiebl */ 
 button {
     background: #250c30;
-    font-family: "Roboto",serif;
+    font-family: "Roboto Slab",serif;
+    margin-left: 27px !important;
     padding: 0.6em 1.3em;
     font-weight: 700;
     font-size: 18px;
@@ -67,7 +81,7 @@ button:active {
   }
 /*end button*/
 h2{
-    font-family: "Lora",serif;
+    font-family: "Roboto slab",serif;
     color: white;
     padding-top: 50px;
     
@@ -92,7 +106,7 @@ h2{
     font-size: 48px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: "Lora",serif ;
+    font-family: "Roboto Slab",serif ;
     position: absolute;
     top: 150px;
     left: 20px;
@@ -106,7 +120,7 @@ h2{
     font-size: 18px;
     line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    font-family: "Roboto",serif;
+    font-family: "Lato",serif;
     text-align: justify;
     width: 550px;
     height: 193px;
@@ -135,10 +149,10 @@ h2{
     border: none !important;
 }
 .card-header{
-    font-family: "Lora",serif;
+    font-family: "Roboto Slab",serif;
 }
 .card-body2{
-    font-family: "Roboto",serif;
+    font-family: "Lato",serif;
     margin-left: 300px;
     width: 900px;
 }
@@ -182,11 +196,11 @@ background-color: #250c30 !important;
 }
 .card-header-info{
     color: white;
-    font-family: "Lora",serif;
+    font-family: "Roboto Slab",serif;
 }
 .card-text-info{
     color: white;
-    font-family: "Roboto",serif;
+    font-family: "Lato",serif;
 }
 .table-info{
     position: absolute;
@@ -195,12 +209,12 @@ background-color: #250c30 !important;
 .titletable-info {
     color: white;
     text-align: center;
-    font-family: "Lora", serif;
+    font-family: "Roboto Slab", serif;
 }
 .bodytable-info{
     color: white;
     text-align: justify;
-    font-family: "Roboto", serif;
+    font-family: "Lato", serif;
 }
 .card2{
     display: flex;
