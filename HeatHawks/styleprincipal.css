@@ -94,10 +94,6 @@ h2{
     height: 2000px;
     margin-top: 68px;
     background-color: #110516;
-    background-image: radial-gradient(#f2c419 2px, transparent 0);
-    background-size: 30px 30px;
-    background-position: -5px -5px
-     
 }
 .background-container {
     position: absolute;
@@ -152,14 +148,9 @@ h2{
     padding-top: 5px;
     border-radius: 100% !important;
 }
-.ask1{
-    background-image: radial-gradient(#f2c419 2px, transparent 0) !important;
-}
+
 .card-custom-bg{
     background-color: #110516 !important;
-    background-image: radial-gradient(#f2c419 2px, transparent 0);
-    background-size: 30px 30px;
-    background-position: -5px -5px;
     color: white !important;
     border: none !important;
 

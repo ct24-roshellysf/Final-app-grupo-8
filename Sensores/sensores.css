@@ -1,18 +1,19 @@
 
 .contenedor{
     width: 1499px;
-    height: 1200px;
+    height: 1290px;
     position: absolute;
     z-index: -2;
     animation: floatUpDown 6s ease-in-out infinite;
-    filter: brightness(70%);
+    filter: brightness(80%);
 }
+
 @keyframes floatUpDown {
     0% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-15px);
+      transform: translateY(-8px);
     }
     100% {
       transform: translateY(0);
@@ -57,6 +58,7 @@ h3:hover {
     width: 660px; /* 2 cards de 300px + espacio */
     margin: 50px;
     padding: 20px 0;
+    overflow: hidden;
   }
 
   /* Estilo base de cada tarjeta */
@@ -67,12 +69,12 @@ h3:hover {
     overflow: hidden;
     border-radius: 6% !important;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-    transition: all 0.4s;
+    transition: all 0.5s;
     cursor: pointer;
   }
 
   .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: #deb318;
     border-radius: 15px;
   }
@@ -85,7 +87,7 @@ h3:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s;
+    transition: all 0.5s;
     opacity: 1;
     z-index: 2;
     font-size: 20px;
@@ -101,15 +103,18 @@ h3:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s;
-    font-size: 0px;
+    transition: all 0.5s;
+    font-size: 18px !important;
     transform: rotate(90deg) scale(-1);
     z-index: 1;
+    flex-direction: column;
+    gap: 10px;
   }
 
   /* Hover cambia visibilidad */
   .card:hover .first-content {
     opacity: 0;
+    z-index: 1;
   }
 
   .card:hover .second-content {
@@ -120,4 +125,49 @@ h3:hover {
     font-family: "Lato", serif;
     text-align: justify;
     padding: 10px;
+    z-index: 3;
   }
+
+  /* From Uiverse.io by adamgiebl */ 
+button {
+  color: white;
+  background: black;
+  font-family: "Lato",serif;
+  padding: 0.6em 1.3em;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid #023546;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.10em, 0.10em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.imgbutton1{
+  margin-top: -18% !important;
+  margin-left: 15.5% !important;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.imgbutton2{
+  margin-top: 6.5% !important;
+  margin-left: -21.8% !important;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.imgbutton1:hover,
+.imgbutton2:hover{
+  filter: brightness(1.2);
+  filter: drop-shadow(0 0 10px #e2e843) drop-shadow(0 0 20px #e2e843);
+  transform: scale(1.10);
+  transition: all 0.3s ease;
+}
