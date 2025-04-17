@@ -1,130 +1,123 @@
 
-.container-fluid1 {
+.contenedor{
     width: 1499px;
     height: 1200px;
     position: absolute;
     z-index: -2;
-    background-color: #1f0a28;
+    animation: floatUpDown 6s ease-in-out infinite;
+    filter: brightness(70%);
 }
+@keyframes floatUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 h3 {
-    font-family: "Lora",serif;
-    color: white; /* Un tono crema suave que combina bien */
+    margin-left: 47px;
+    padding-top: 2%;
+    font-family: "Roboto Slab",serif;
+    color: black; /* Un tono crema suave que combina bien */
     text-shadow: 2px 2px 5px #000000; /* Sombras para mayor impacto */
+    text-shadow:
+    -3px -3px 0 #f2c419,
+     3px -3px 0 #f2c419,
+    -3px  3px 0 #f2c419,
+     3px  3px 0 #f2c419,
+    -3px  0px 0 #f2c419,
+     3px  0px 0 #f2c419,
+     0px -3px 0 #f2c419,
+     0px  3px 0 #f2c419;
     transition: text-shadow 0.3s ease;
+
 }
 h3:hover {
-    text-shadow: 0 0 10px #e2e843, 0 0 20px #e2e843, 0 0 30px #e2e843;
+    text-shadow: 0 0 10px #f2c419, 0 0 20px #f2c419, 0 0 30px #f2c419;
+}
+.imagenes{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6%;
+    display: block;
+}
+
+/* From Uiverse.io by suleymanlaarabidev */ 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 660px; /* 2 cards de 300px + espacio */
+    margin: 50px;
+    padding: 20px 0;
   }
 
-.card-title{
-    justify-content: center;
-    text-align: center;
-    font-family: "Lora",serif;
-}
-.card-text{
-    font-family: "Roboto",serif;
-}
-.card1{
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    height: 60%;
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 8%;
-    font-size: 18px;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-}
-.card2{
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    height: 60%;
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 40%;
-    font-size: 18px;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-}
-.card3{
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    height: 60%;
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 72%;
-    font-size: 18px;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-}
-.card4{
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    height: 60%;
-    width: 40%;
-    margin-top: 40%;
-    margin-left: 24%;
-    font-size: 18px;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-}
-
-.card-body{
-    background-color: black;
-}
-
-.imgbutton1{
-    margin-top: 45%;
-    margin-left: 53%;
-    transition: filter 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-.imgbutton2{
-    margin-top: -22%;
-    margin-left: 70%;
-    transition: filter 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-.imgbutton1:hover,
-.imgbutton2:hover{
-    filter: brightness(1.2);
-    filter: drop-shadow(0 0 10px #e2e843) drop-shadow(0 0 20px #e2e843);
-    transform: scale(1.10);
-    transition: all 0.3s ease;
-}
-
-
-
-/* From Uiverse.io by adamgiebl */ 
-button {
-    color: white;
-    background: #250c30;
-    font-family: "Roboto",serif;
-    padding: 0.6em 1.3em;
-    font-weight: 700;
-    font-size: 18px;
-    border: 3px solid black;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em;
+  /* Estilo base de cada tarjeta */
+  .card {
+    width: 300px;
+    height: 254px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6% !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    transition: all 0.4s;
     cursor: pointer;
   }
-  
-button:hover {
-    transform: translate(-0.05em, -0.05em);
-    box-shadow: 0.15em 0.15em;
-  }
-  
-button:active {
-    transform: translate(0.05em, 0.05em);
-    box-shadow: 0.05em 0.05em;
+
+  .card:hover {
+    transform: scale(1.1);
+    background-color: #deb318;
+    border-radius: 15px;
   }
 
+  /* Contenido principal */
+  .card .first-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    opacity: 1;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* Contenido alternativo oculto */
+  .card .second-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+    z-index: 1;
+  }
+
+  /* Hover cambia visibilidad */
+  .card:hover .first-content {
+    opacity: 0;
+  }
+
+  .card:hover .second-content {
+    opacity: 1;
+    font-size: 22px;
+    transform: rotate(0deg);
+    color: #000000;
+    font-family: "Lato", serif;
+    text-align: justify;
+    padding: 10px;
+  }

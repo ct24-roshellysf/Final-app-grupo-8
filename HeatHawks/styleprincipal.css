@@ -49,7 +49,7 @@
 .card-text1{
     font-family: "Lato",serif;
     color: #f2c419;
-    
+    text-shadow: 20px 20px 30px #000000;
     font-size: 22px;
     width: 600px;
     margin-left: 27px;
@@ -57,13 +57,13 @@
 }
 /* From Uiverse.io by adamgiebl */ 
 button {
-    background: #250c30;
+    background: black;
     font-family: "Roboto Slab",serif;
     margin-left: 27px !important;
     padding: 0.6em 1.3em;
     font-weight: 700;
     font-size: 18px;
-    border: 3px solid black;
+    border: 3px solid #f2c419;
     color: white;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
@@ -83,13 +83,20 @@ button:active {
 h2{
     font-family: "Roboto slab",serif;
     color: white;
-    padding-top: 50px;
+    padding-top: 10px;
+    background-color: #110516;
     
 }
+.card-header1{
+    background-color: #110516 !important;
+}
 .mitad{
-     background-color: #250c30;
-     height: 2000px;
-     margin-top: 68px;
+    height: 2000px;
+    margin-top: 68px;
+    background-color: #110516;
+    background-image: radial-gradient(#f2c419 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px
      
 }
 .background-container {
@@ -134,19 +141,28 @@ h2{
     1px  1px 0 #000;
 }
 .ods13{
-    width: 200px;
-    height: 200px;
-    padding-top: 50px;
+    width: 190px;
+    height: 180px;
+    padding-top: 5px;
+    border-radius: 100% !important;
 }
 .ods15{
-    width: 200px;
-    height: 200px;
-    padding-top: 50px;
+    width: 190px;
+    height: 180px;
+    padding-top: 5px;
+    border-radius: 100% !important;
+}
+.ask1{
+    background-image: radial-gradient(#f2c419 2px, transparent 0) !important;
 }
 .card-custom-bg{
-    background-color: #250c30 !important;
+    background-color: #110516 !important;
+    background-image: radial-gradient(#f2c419 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
     color: white !important;
     border: none !important;
+
 }
 .card-header{
     font-family: "Roboto Slab",serif;
@@ -159,6 +175,7 @@ h2{
 .card-text2{
 font-size: 19px;
 width: 900px;
+background-color: #110516;
 }
 
 .accordion{
@@ -166,17 +183,17 @@ width: 900px;
 }
 
 .accordion-button{
-    background-color: #250c30 !important;
+    background-color: #110516 !important;
     color: white !important;
     font-size: 20px !important;
 }
 
 .accordion-item{
-background-color: #250c30 !important;
+background-color: #110516 !important;
 }
 
 .accordion-body{
-background-color: #250c30 !important;
+background-color: #110516 !important;
 }
 
 /*procesos*/
@@ -245,6 +262,7 @@ background-color: #250c30 !important;
 .card-title{
     margin-top: -16px;
     height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .card-text{
     margin-top: -8px;
@@ -252,6 +270,7 @@ background-color: #250c30 !important;
     width: 430px;
     height: 200px;
     text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 /*procesos*/
 
